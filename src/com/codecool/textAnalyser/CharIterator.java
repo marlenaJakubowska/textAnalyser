@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class CharIterator implements Iterator<String> {
+public class CharIterator extends FileReader implements Iterator<String> {
     private final List<String> characters;
     private final FileContent fileContent;
     private int index;
@@ -26,16 +26,6 @@ public class CharIterator implements Iterator<String> {
             }
         }
         return result;
-    }
-
-    public String getFileContent(String fileName) {
-        String content = "";
-        try {
-            content = new String(Files.readAllBytes(Paths.get(fileName)));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return content;
     }
 
     @Override
