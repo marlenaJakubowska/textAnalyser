@@ -12,10 +12,10 @@ public class FileContent implements IterableText{
         return fileName;
     }
 
-//    @Override
-//    public Iterator<String> wordIterator(){
-//        return new WordIterator(this);
-//    }
+    @Override
+    public Iterator<String> wordIterator(){
+        return new WordIterator(this);
+    }
 
     @Override
     public Iterator<String> charIterator(){
