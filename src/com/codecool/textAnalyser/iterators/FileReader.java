@@ -1,4 +1,4 @@
-package com.codecool.textAnalyser;
+package com.codecool.textAnalyser.iterators;
 
 import java.io.IOException;
 import java.nio.file.Files;

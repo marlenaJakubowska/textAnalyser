@@ -1,4 +1,6 @@
-package com.codecool.textAnalyser;
+package com.codecool.textAnalyser.iterators;
+
+import com.codecool.textAnalyser.models.FileContent;
 
 import java.util.Arrays;
 import java.util.Iterator;

@@ -1,4 +1,9 @@
-package com.codecool.textAnalyser;
+package com.codecool.textAnalyser.controller;
+
+import com.codecool.textAnalyser.models.FileContent;
+import com.codecool.textAnalyser.iterators.CharIterator;
+import com.codecool.textAnalyser.iterators.WordIterator;
+import com.codecool.textAnalyser.view.View;
 
 import java.io.File;
 import java.util.HashMap;

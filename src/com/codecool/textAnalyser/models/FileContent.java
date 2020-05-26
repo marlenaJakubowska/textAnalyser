@@ -1,7 +1,10 @@
-package com.codecool.textAnalyser;
+package com.codecool.textAnalyser.models;
+import com.codecool.textAnalyser.iterators.CharIterator;
+import com.codecool.textAnalyser.iterators.WordIterator;
+
 import java.util.Iterator;
 
-public class FileContent implements IterableText{
+public class FileContent implements IterableText {
     private final String fileName;
 
     public FileContent(String fileName) {

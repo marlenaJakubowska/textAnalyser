@@ -1,5 +1,8 @@
 package com.codecool.textAnalyser;
 
+import com.codecool.textAnalyser.controller.Engine;
+import com.codecool.textAnalyser.view.View;
+
 import java.io.PrintStream;
 
 public class Application {

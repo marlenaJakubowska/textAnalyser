@@ -1,4 +1,4 @@
-package com.codecool.textAnalyser;
+package com.codecool.textAnalyser.models;
 import java.util.Iterator;
 
 public interface IterableText {

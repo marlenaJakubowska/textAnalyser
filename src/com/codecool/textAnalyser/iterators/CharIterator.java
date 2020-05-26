@@ -1,8 +1,7 @@
-package com.codecool.textAnalyser;
+package com.codecool.textAnalyser.iterators;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import com.codecool.textAnalyser.models.FileContent;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

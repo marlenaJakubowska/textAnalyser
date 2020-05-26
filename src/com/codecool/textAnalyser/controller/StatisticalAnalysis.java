@@ -1,4 +1,4 @@
-package com.codecool.textAnalyser;
+package com.codecool.textAnalyser.controller;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package com.codecool.textAnalyser;
+package com.codecool.textAnalyser.view;
 
 import java.util.Map;
 import java.util.Set;
