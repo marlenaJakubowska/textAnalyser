@@ -41,4 +41,8 @@ public class View {
         }
         printStream.println();
     }
+
+    public void printTime(double applicationRunTime) {
+        printStream.print("Benchmark time: " + applicationRunTime);
+    }
 }

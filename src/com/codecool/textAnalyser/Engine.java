@@ -9,6 +9,7 @@ public class Engine {
     private StatisticalAnalysis characterAnalysis;
     private StatisticalAnalysis wordAnalysis;
     private final View view;
+    private long startTime;
 
 
     public Engine(String[] args, View view) {
@@ -21,10 +22,18 @@ public class Engine {
             System.out.println("no arguments provided");
             return;
         }
+        this.startTime = System.nanoTime();
         for (String fileName : args) {
             checkForFile(fileName);
             analyseFile(fileName);
         }
+        displayTime();
+    }
+
+    private void displayTime() {
+        long longTime = System.nanoTime() - startTime;
+        double applicationRunTime = (double) longTime / 1000000000.0;
+        view.printTime(applicationRunTime);
     }
 
     private static boolean areArgsProvided(String[] args) {
