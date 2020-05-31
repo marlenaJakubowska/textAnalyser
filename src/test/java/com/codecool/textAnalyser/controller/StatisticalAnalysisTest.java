@@ -4,6 +4,11 @@ import com.codecool.textAnalyser.iterators.CharIterator;
 import com.codecool.textAnalyser.models.FileContent;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatisticalAnalysisTest {
@@ -66,5 +71,25 @@ class StatisticalAnalysisTest {
         CharIterator charIterator = new CharIterator(fileContent);
         statisticalAnalysis = new StatisticalAnalysis(charIterator);
         assertNotEquals(38, statisticalAnalysis.size());
+    }
+
+    @Test
+    void checkCorrectOccurMoreThan() {
+        String[] args = {"test.txt"};
+        FileContent fileContent = new FileContent(args[0]);
+        CharIterator charIterator = new CharIterator(fileContent);
+        statisticalAnalysis = new StatisticalAnalysis(charIterator);
+        Set<String> set = new HashSet<>(Arrays.asList("t"));
+        assertEquals(set, statisticalAnalysis.occurMoreThan(9));
+    }
+
+    @Test
+    void checkinCorrectOccurMoreThan() {
+        String[] args = {"test.txt"};
+        FileContent fileContent = new FileContent(args[0]);
+        CharIterator charIterator = new CharIterator(fileContent);
+        statisticalAnalysis = new StatisticalAnalysis(charIterator);
+        Set<String> set = new HashSet<>(Arrays.asList("t"));
+        assertNotEquals(set, statisticalAnalysis.occurMoreThan(8));
     }
 }
