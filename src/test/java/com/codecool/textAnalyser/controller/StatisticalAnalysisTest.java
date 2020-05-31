@@ -2,12 +2,9 @@ package com.codecool.textAnalyser.controller;
 
 import com.codecool.textAnalyser.iterators.CharIterator;
 import com.codecool.textAnalyser.models.FileContent;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,7 +21,7 @@ class StatisticalAnalysisTest {
         CharIterator charIterator = new CharIterator(fileContent);
         statisticalAnalysis = new StatisticalAnalysis(charIterator);
     }
-    
+
     @Test
     void checkCorrectDictionarySize() {
         assertEquals(8, statisticalAnalysis.dictionarySize());
