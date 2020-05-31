@@ -49,4 +49,22 @@ class StatisticalAnalysisTest {
         assertNotEquals(4, statisticalAnalysis.countOf("e"));
         assertNotEquals(2, statisticalAnalysis.countOf("s"));
     }
+
+    @Test
+    void checkCorrectSize() {
+        String[] args = {"test.txt"};
+        FileContent fileContent = new FileContent(args[0]);
+        CharIterator charIterator = new CharIterator(fileContent);
+        statisticalAnalysis = new StatisticalAnalysis(charIterator);
+        assertEquals(39, statisticalAnalysis.size());
+    }
+
+    @Test
+    void checkIncorrectSize() {
+        String[] args = {"test.txt"};
+        FileContent fileContent = new FileContent(args[0]);
+        CharIterator charIterator = new CharIterator(fileContent);
+        statisticalAnalysis = new StatisticalAnalysis(charIterator);
+        assertNotEquals(38, statisticalAnalysis.size());
+    }
 }
