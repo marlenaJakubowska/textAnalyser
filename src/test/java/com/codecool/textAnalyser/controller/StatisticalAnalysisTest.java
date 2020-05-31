@@ -27,4 +27,26 @@ class StatisticalAnalysisTest {
         statisticalAnalysis = new StatisticalAnalysis(charIterator);
         assertNotEquals(5, statisticalAnalysis.dictionarySize());
     }
+
+    @Test
+    void checkCorrectCountOfALetter() {
+        String[] args = {"test.txt"};
+        FileContent fileContent = new FileContent(args[0]);
+        CharIterator charIterator = new CharIterator(fileContent);
+        statisticalAnalysis = new StatisticalAnalysis(charIterator);
+        assertEquals(10, statisticalAnalysis.countOf("t"));
+        assertEquals(5, statisticalAnalysis.countOf("e"));
+        assertEquals(9, statisticalAnalysis.countOf("s"));
+    }
+
+    @Test
+    void checkIncorrectCountOfALetter() {
+        String[] args = {"test.txt"};
+        FileContent fileContent = new FileContent(args[0]);
+        CharIterator charIterator = new CharIterator(fileContent);
+        statisticalAnalysis = new StatisticalAnalysis(charIterator);
+        assertNotEquals(9, statisticalAnalysis.countOf("t"));
+        assertNotEquals(4, statisticalAnalysis.countOf("e"));
+        assertNotEquals(2, statisticalAnalysis.countOf("s"));
+    }
 }
