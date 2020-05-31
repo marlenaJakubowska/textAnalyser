@@ -1,6 +1,6 @@
 package com.codecool.textAnalyser;
 
-import com.codecool.textAnalyser.controller.Engine;
+import com.codecool.textAnalyser.controller.Controller;
 import com.codecool.textAnalyser.view.View;
 
 import java.io.PrintStream;
@@ -11,7 +11,7 @@ public class Application {
         String[] args = {"test_dickens_great.txt", "test_malville_moby.txt"};
         PrintStream printStream = new PrintStream(System.out);
         View view = new View(printStream);
-        Engine engine = new Engine(args, view);
-        engine.startAnalysis();
+        Controller controller = new Controller(args, view);
+        controller.startAnalysis();
     }
 }

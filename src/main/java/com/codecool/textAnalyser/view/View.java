@@ -42,6 +42,10 @@ public class View {
         printStream.println();
     }
 
+    public void printNoArgsMsg() {
+        printStream.println("no arguments provided");
+    }
+
     public void printTime(double applicationRunTime) {
         printStream.print("Benchmark time: " + applicationRunTime);
     }

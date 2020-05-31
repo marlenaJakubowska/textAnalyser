@@ -9,7 +9,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Engine {
+public class Controller {
     private final String[] args;
     private StatisticalAnalysis characterAnalysis;
     private StatisticalAnalysis wordAnalysis;
@@ -17,14 +17,14 @@ public class Engine {
     private long startTime;
 
 
-    public Engine(String[] args, View view) {
+    public Controller(String[] args, View view) {
         this.args = args;
         this.view = view;
     }
 
     public void startAnalysis() {
         if (!areArgsProvided(args)) {
-            System.out.println("no arguments provided");
+            view.printNoArgsMsg();
             return;
         }
         this.startTime = System.nanoTime();

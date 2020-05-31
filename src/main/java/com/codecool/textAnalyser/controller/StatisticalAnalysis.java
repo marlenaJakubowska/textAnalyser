@@ -7,7 +7,9 @@ import java.util.Map.Entry;
 public class StatisticalAnalysis {
 
     private final Iterator<String> iterator;
+
     public StatisticalAnalysis(Iterator<String> iterator) {
+
         this.iterator = iterator;
     }
 
