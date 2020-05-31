@@ -43,4 +43,8 @@ public class CharIterator extends FileReader implements Iterator<String> {
         }
         return null;
     }
+
+    public List<String> getCharacters() {
+        return characters;
+    }
 }

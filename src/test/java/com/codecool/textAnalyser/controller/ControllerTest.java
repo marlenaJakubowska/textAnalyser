@@ -3,11 +3,9 @@ package com.codecool.textAnalyser.controller;
 import com.codecool.textAnalyser.view.View;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ControllerTest {
@@ -21,7 +19,6 @@ class ControllerTest {
         outputStream = new ByteArrayOutputStream();
         view = new View(new PrintStream(outputStream));
     }
-
 
     @Test
     void fileNotFoundExceptionTest() {
@@ -38,5 +35,4 @@ class ControllerTest {
         System.out.println(outputStream.toString());
         assertEquals("no arguments provided\n", outputStream.toString());
     }
-
 }
